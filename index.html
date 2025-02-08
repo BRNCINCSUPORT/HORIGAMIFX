@@ -64,21 +64,23 @@
             align-items: center;
         }
 
-        .login-form button {
+        .login-form a {
+            display: inline-block;
             padding: 15px;
             background-color: #0A4D23; /* Verde escuro */
             color: #F5A800; /* Amarelo vibrante */
             border: 1px solid #F5A800;
             border-radius: 8px;
-            cursor: pointer;
+            text-decoration: none;
             font-size: 1rem;
             transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
             width: 100%;
             max-width: 300px;
+            text-align: center;
             text-shadow: 0 0 5px #F5A800;
         }
 
-        .login-form button:hover {
+        .login-form a:hover {
             background-color: #F5A800; /* Amarelo vibrante */
             color: #0A4D23; /* Verde escuro */
             transform: translateY(-2px);
@@ -147,7 +149,7 @@
                 font-size: 1rem;
             }
 
-            .login-form button {
+            .login-form a {
                 padding: 12px;
                 font-size: 0.9rem;
             }
@@ -157,10 +159,10 @@
 
 <body>
     <div class="login-container">
-        <h1>HORIGAMI </h1>
+        <h1>HORIGAMI</h1>
         <p>FX</p>
         <div class="login-form">
-            <button onclick="loginWithGitHub()">Login with GitHub</button>
+            <a href="pay.html">Enter</a>
         </div>
     </div>
 
@@ -168,16 +170,6 @@
     <div class="footer">
         &copy; 2024 HORIGAMI FX . BY LUCAS JANUARIO .
     </div>
-
-    <script>
-        // Função para iniciar o login com GitHub
-        function loginWithGitHub() {
-            const clientId = 'Ov23ligABw183Fxx0BBK'; // Substitua pelo seu Client ID do GitHub
-            const redirectUri = 'https://brncincsuport.github.io/HORIGAMIFX/pay.html'; // Alterado para redirecionar para main.html
-            const githubLoginUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=user:email`;
-            window.location.href = githubLoginUrl;
-        }
-    </script>
 </body>
 
 </html>
